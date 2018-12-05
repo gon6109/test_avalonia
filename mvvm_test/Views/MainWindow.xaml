@@ -1,0 +1,13 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:mvvm_test.ViewModels;assembly=mvvm_test"
+        Icon="resm:mvvm_test.Assets.avalonia-logo.ico"
+        Title="mvvm_test">
+
+  <Design.DataContext>
+    <vm:MainWindowViewModel/>
+  </Design.DataContext>
+  
+  <TextBox Text="{Binding Greeting}"/>
+  
+</Window>
