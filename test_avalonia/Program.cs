@@ -32,7 +32,8 @@ namespace test_avalonia
 
         public static AppBuilder BuildAvaloniaApp()
             => AppBuilder.Configure<App>()
-                .UsePlatformDetect()
+                         .UseSkia()
+                         .UseMonoMac()
                 .LogToDebug()
                 .SetupWithoutStarting();
     }

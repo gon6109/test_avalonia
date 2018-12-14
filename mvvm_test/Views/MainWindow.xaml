@@ -7,7 +7,22 @@
   <Design.DataContext>
     <vm:MainWindowViewModel/>
   </Design.DataContext>
-  
-  <TextBox Text="{Binding Greeting}"/>
-  
+  <StackPanel Margin="10">
+    <StackPanel.Styles>
+      <Style Selector="TextBlock.Heading">
+        <Setter Property="TextBlock.FontSize" Value="20" />
+        <Setter Property="TextBlock.Foreground" Value="Blue" />
+      </Style>
+      <Style Selector="Button">
+        <Setter Property="Button.Background" Value="LightBlue" />
+      </Style>
+    </StackPanel.Styles>
+    <TextBox Text="{Binding Greeting}"/>
+    <TextBlock Classes="Heading">Hello</TextBlock>
+    <TextBlock Name="tb">world</TextBlock>
+    <TextBox Text="{Binding Text}" />
+    <Button Content="Button" />
+    <TextBox Name="other"/>
+    <TextBlock Text="{Binding Text, ElementName=other}"/>
+  </StackPanel>
 </Window>
